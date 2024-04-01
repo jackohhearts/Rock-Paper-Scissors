@@ -1,5 +1,5 @@
-let computerSelection = getComputerChoice()
-let playerSelection = prompt()
+
+
 
 
 function getComputerChoice() {
@@ -16,6 +16,8 @@ function getComputerChoice() {
 
 
     function playRound() {
+        let playerSelection = prompt()
+        let computerSelection = getComputerChoice()
         getComputerChoice()
         console.log("You Selected: " + playerSelection)
         console.log("The Computer Selected: " + computerSelection)
@@ -46,10 +48,11 @@ function getComputerChoice() {
         
     }
 
-function playGame() {
-    playRound()
-    console.log(playRound(playerSelection, computerSelection))
-}
+console.log(playRound())
+console.log(playRound())
+console.log(playRound())
+console.log(playRound())
+console.log(playRound())
 
 
 
