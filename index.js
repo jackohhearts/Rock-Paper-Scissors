@@ -18,45 +18,46 @@ function getComputerChoice() {
 
     function playRound() {
         let playerSelection = prompt()
+        playerSelection = playerSelection.toLowerCase()
         let computerSelection = getComputerChoice()
        
         console.log("You Selected: " + playerSelection)
         console.log("The Computer Selected: " + computerSelection)
         
-        if (playerSelection === "Rock" && computerSelection === "Rock") {
+        if (playerSelection === "rock" && computerSelection === "Rock") {
             console.log("Tie!")
             return "Tie!"
-        }   else if (playerSelection === "Rock" && computerSelection === "Paper") {
+        }   else if (playerSelection === "rock" && computerSelection === "Paper") {
             console.log("You Lose!")
             computerScore += 1
             return "You Lose!"
-        }   else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        }   else if (playerSelection === "rock" && computerSelection === "Scissors") {
             console.log("You Win!")
             playerScore += 1
             return "You Win!"
         }
         
-        if (playerSelection === "Scissors" && computerSelection === "Scissors") {
+        if (playerSelection === "scissors" && computerSelection === "Scissors") {
             console.log("Tie!")
             return "Tie!"
-        }   else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+        }   else if (playerSelection === "scissors" && computerSelection === "Rock") {
             console.log("You Lose!")
             computerScore += 1
             return "You Lose!"
-        }   else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+        }   else if (playerSelection === "scissors" && computerSelection === "Paper") {
             console.log("You Win!")
             playerScore += 1
             return "You Win!"
         }
       
-        if (playerSelection === "Paper" && computerSelection === "Paper") {
+        if (playerSelection === "paper" && computerSelection === "Paper") {
             console.log("Tie!")
             return "Tie!"
-        }   else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        }   else if (playerSelection === "paper" && computerSelection === "Scissors") {
             console.log("You Lose!")
             computerScore += 1
             return "You Lose!"
-        }   else if (playerSelection === "Paper" && computerSelection === "Rock") {
+        }   else if (playerSelection === "paper" && computerSelection === "Rock") {
             console.log("You Win!")
             playerScore += 1
             return "You Win!"
