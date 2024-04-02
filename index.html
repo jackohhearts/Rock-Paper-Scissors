@@ -9,17 +9,25 @@
 <body>
     <div class="container">
         <h1>Rock, Paper, Scissors</h1>
+        <h4>Classic Game of Rock, Paper, Scissors</h4>
+        <h5>First To Five Wins!</h5>
         <div class="elements">
-    <p id="playerSelection-el">You Selected:</p>
-    <p id="computerSelection-el">The Computer Selected:</p>
-    <p id="roundResult-el">Result:</p>
-    <p id="score-el">Current Score:</p>
+    <p id="playerSelection-el">Good Luck...</p>
+    <p id="computerSelection-el"></p>
+    <p id="roundResult-el"></p>
+    <p id="roundNumber-el"></p>
+    <p id="score-el"></p>
     <p id="winner-el"></p>
+        </div>
+
+        <div class="playAgainContainer">
+            <p id="playAgain-el"></p>
         </div>
         
 
         
-
+        <h3>Choose Your Weapon:</h3>
+      
         <div class="buttons">
     <button id="rockButton" onclick="playerChoiceRock()">Rock</button>
     <button id="paperButton" onclick="playerChoicePaper()">Paper</button>
@@ -28,9 +36,7 @@
  
         </div>
     
-        <div class="playAgainContainer">
-            <p id="playAgain-el"></p>
-        </div>
+        
         <script src="index.js"></script>
 </div>
 </body>

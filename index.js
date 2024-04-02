@@ -1,6 +1,7 @@
 let computerScore = 0
 let playerScore = 0
 let isAlive = false
+let roundNumber = 0
 let playerSelectionEl = document.getElementById("playerSelection-el")
 let computerSelectionEl = document.getElementById("computerSelection-el")
 let roundResultEl = document.getElementById("roundResult-el")
@@ -8,6 +9,7 @@ let scoreEl = document.getElementById("score-el")
 let winnerEl = document.getElementById("winner-el")
 let playAgainEl = document.getElementById("playAgain-el")
 let computerSelection = ""
+let roundNumberEl = document.getElementById("roundNumber-el")
 
 
 
@@ -43,6 +45,7 @@ function playerChoiceScissors() {
 
 
     function playRound() {
+        roundNumber += 1
         isAlive = true
         playerSelection = playerSelection.toUpperCase()
         
@@ -56,48 +59,48 @@ function playerChoiceScissors() {
         
         if (playerSelection === "ROCK" && computerSelection === "ROCK") {
             
-            roundResultEl.textContent = "Result: Tie!" 
+            roundResultEl.textContent = "Tie!" 
             return "Tie!"
         }   else if (playerSelection === "ROCK" && computerSelection === "PAPER") {
             
-            roundResultEl.textContent = "Result: You Lose!" 
+            roundResultEl.textContent = "You Lose!" 
             computerScore += 1
             return "You Lose!"
         }   else if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
             
-            roundResultEl.textContent = "Result: You Win!" 
+            roundResultEl.textContent = "You Win!" 
             playerScore += 1
             return "You Win!"
         }
         
         if (playerSelection === "SCISSORS" && computerSelection === "SCISSORS") {
             
-            roundResultEl.textContent = "Result: Tie!" 
+            roundResultEl.textContent = "Tie!" 
             return "Tie!"
         }   else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
             
-            roundResultEl.textContent = "Result: You Lose!" 
+            roundResultEl.textContent = "You Lose!" 
             computerScore += 1
             return "You Lose!"
         }   else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
             
-            roundResultEl.textContent = "Result: You Win!" 
+            roundResultEl.textContent = "You Win!" 
             playerScore += 1
             return "You Win!"
         }
       
         if (playerSelection === "PAPER" && computerSelection === "PAPER") {
             
-            roundResultEl.textContent = "Result: Tie!" 
+            roundResultEl.textContent = "Tie!" 
             return "Tie!"
         }   else if (playerSelection === "PAPER" && computerSelection === "SCISSORS") {
             
-            roundResultEl.textContent = "Result: You Lose!" 
+            roundResultEl.textContent = "You Lose!" 
             computerScore += 1
             return "You Lose!"
         }   else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
             
-            roundResultEl.textContent = "Result: You Win!" 
+            roundResultEl.textContent = "You Win!" 
             playerScore += 1
             return "You Win!"
         }   
@@ -107,13 +110,14 @@ function playerChoiceScissors() {
     function playGame() {
         playRound()
         
-        scoreEl.textContent = "Your Score: " + playerScore + " " + "----- " + "Computer Score: " + computerScore
+        roundNumberEl.textContent = "Round Number: " + roundNumber
+        scoreEl.textContent = "Your Score: " + playerScore + " " + "-- " + "Computer Score: " + computerScore
         if (playerScore === 5 && computerScore < 5) {
             rockButton.setAttribute("disabled", 1)
             paperButton.setAttribute("disabled", 1)
             scissorsButton.setAttribute("disabled", 1)
            isAlive = false
-            winnerEl.textContent = "You Win The Game!"
+            winnerEl.textContent = "You Won The Game!"
             playAgainEl.innerHTML = '<button onclick="newGame()">Play Again?</button>'
             
             return "You Win The Game!"
@@ -123,7 +127,7 @@ function playerChoiceScissors() {
             paperButton.setAttribute("disabled", 1)
             scissorsButton.setAttribute("disabled", 1)
             isAlive = false
-            winnerEl.textContent = "You Lose The Game! The Computer Beat You!"
+            winnerEl.textContent = "You Lost The Game! The Computer Beat You!"
             playAgainEl.innerHTML = '<button onclick="newGame()">Play Again?</button>'
             return "You Lose The Game! The Computer Beat You!"
         } 

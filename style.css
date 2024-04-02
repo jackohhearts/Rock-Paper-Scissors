@@ -1,6 +1,28 @@
 body {
     background-color: rgb(156, 203, 214);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    
+}
+
+h4 {
+    margin-bottom: -5px;
+}
+
+h3 {
+    font-style: italic;
+}
+
+#roundResult-el {
+    justify-content: center;
+    text-align: center;
+    color: rgb(44, 88, 78);
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .container {
@@ -9,20 +31,35 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
+    background-color: rgba(203, 142, 249, 0.269);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid black;
 
+}
+.buttons {
+    padding: 10px;
+    justify-content: space-between;
 }
 
 button {
-    height: 70px;
-    width: 120px;
+    height: 60px;
+    width: 90px;
     border-radius: 7px;
-    background-color: bisque;
+    background-color: rgb(155, 123, 251);
+    border: 1px solid black;
+    
 }
 
 .elements {
     color: rgb(37, 40, 40);
 }
 
-#roundResult-el {
-    color: rgb(43, 125, 92);
+
+#winner-el {
+    font-size: 35px;
+    font-weight: bolder;
 }
+
