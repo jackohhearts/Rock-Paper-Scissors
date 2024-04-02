@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="style.css">
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
+    <div class="container">
+        <h1>Rock, Paper, Scissors</h1>
+        <div class="elements">
     <p id="playerSelection-el">You Selected:</p>
     <p id="computerSelection-el">The Computer Selected:</p>
     <p id="roundResult-el">Result:</p>
+    <p id="score-el">Current Score:</p>
+    <p id="winner-el"></p>
+        </div>
 
+        
+
+        <div class="buttons">
     <button id="rockButton" onclick="playerChoiceRock()">Rock</button>
     <button id="paperButton" onclick="playerChoicePaper()">Paper</button>
     <button id="scissorsButton" onclick="playerChoiceScissors()">Scissors</button>
     <script src="index.js"></script>
+        </div>
     
+
+</div>
 </body>
 </html>

@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(156, 203, 214);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+    height: 70px;
+    width: 120px;
+    border-radius: 7px;
+    background-color: bisque;
+}
+
+.elements {
+    color: rgb(37, 40, 40);
+}
+
+#roundResult-el {
+    color: rgb(43, 125, 92);
+}
