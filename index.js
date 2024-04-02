@@ -1,6 +1,5 @@
 let computerScore = 0
 let playerScore = 0
-let isAlive = false
 let roundNumber = 0
 let playerSelectionEl = document.getElementById("playerSelection-el")
 let computerSelectionEl = document.getElementById("computerSelection-el")
@@ -46,7 +45,6 @@ function playerChoiceScissors() {
 
     function playRound() {
         roundNumber += 1
-        isAlive = true
         playerSelection = playerSelection.toUpperCase()
         
         computerSelection = computerSelection.toUpperCase()
@@ -116,7 +114,6 @@ function playerChoiceScissors() {
             rockButton.setAttribute("disabled", 1)
             paperButton.setAttribute("disabled", 1)
             scissorsButton.setAttribute("disabled", 1)
-           isAlive = false
             winnerEl.textContent = "You Won The Game!"
             playAgainEl.innerHTML = '<button onclick="newGame()">Play Again?</button>'
             
@@ -126,15 +123,15 @@ function playerChoiceScissors() {
             rockButton.setAttribute("disabled", 1)
             paperButton.setAttribute("disabled", 1)
             scissorsButton.setAttribute("disabled", 1)
-            isAlive = false
-            winnerEl.textContent = "You Lost The Game! The Computer Beat You!"
+            winnerEl.textContent = "You Lost The Game!"
             playAgainEl.innerHTML = '<button onclick="newGame()">Play Again?</button>'
-            return "You Lose The Game! The Computer Beat You!"
+            return "You Lost The Game!"
         } 
         
     }
 
     function newGame() {
+        roundNumber = -1
         playerScore = 0
         playerSelection = ""
         computerSelection = ""
